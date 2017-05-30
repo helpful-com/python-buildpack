@@ -198,6 +198,8 @@ source $BIN_DIR/steps/cryptography
 
 # Install dependencies with Pip (where the magic happens).
 __pip_installation=`which pip`
+pip list --format=columns
+ls -al $(dirname $__pip_installation)
 echo "-----> Running with pip $__pip_installation"
 source $BIN_DIR/steps/pip-install
 
